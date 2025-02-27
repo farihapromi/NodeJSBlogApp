@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+ 
+  <div class="details content">
+    <div class="delete-container">
+      <form action="/blogs/delete/<%= blog._id %>" method="POST">
+        <button class="delete" type="submit">Delete</button>
+      </form>
+    </div>
+    <h2><%= blog.title %></h2>
+    <div class="content">
+      <p><%= blog.body %></p>
+    </div>
+  </div>
+  
+
+  <%- include("./partials/footer.ejs") %>
+
+  
+</body>
+</html>
